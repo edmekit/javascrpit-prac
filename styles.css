@@ -1,13 +1,26 @@
 body {
-    background-color: black;
+    background-color: beige;
+    z-index: 2;
 }
 
 #circle {
     position: absolute;
-    top: 45%;
-    left: 45%;
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
+    top: 40%;
+    left: 22%;
+    width: 60%;
+    height: 20%;
+    border-radius: 20%;
     background-color: white;
+    z-index: 1;
+}
+
+#cloud {
+    position: fixed;
+    top: 40%;
+    left: 22%;
+    width: 10%;
+    height: 5%;
+    border-radius: 50%;
+    background-color: rgb(209, 209, 255);
+    z-index: -1;
 }
