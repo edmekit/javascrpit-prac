@@ -1,1 +1,2 @@
 alert("BEWARE OF ME YOU MOTHERFUCKERS");
+document.body.innerHTML = "CRAZY JAVASCRIPT";
