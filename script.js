@@ -1,4 +1,5 @@
-let age = 30;
-let name = 'Jhon';
+let cart = 0
 
-document.body.innerHTML = `My name is ${name} and I am ${age} years old`;
+function add_show(cart) {
+    console.log(`Cart has ${cart} items`)
+}

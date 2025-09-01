@@ -7,8 +7,26 @@
     <title>JS PRACTICE</title>
 </head>
 <body>
+    <button onclick="
+        add_show(cart)">Show cart
+    </button>
     
-
+    <button onclick="cart++;
+    add_show(cart)">
+        Add to cart
+    </button>
+    
+    <button onclick="cart+=2;
+    add_show(cart)">+2
+    </button>
+    
+    <button onclick = "cart+=3;
+    add_show(cart)">+3
+    </button>    
+    
+    <button onclick="cart = 0;
+    add_show(cart)">Clear cart
+    </button>
     <script src="script.js"></script>
 </body>
 </html>
