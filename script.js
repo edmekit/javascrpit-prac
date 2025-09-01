@@ -2,28 +2,37 @@ function pick (choice){
     num = Math.random()
     if (num <= 0.3){
         computer = "Rock"
-    }
-    else if (num <= 0.6){
+    } else if (num <= 0.6){
         computer = "Paper"
-    }
-    else {
+    } else if (num <= 1) {
         computer = "Scissors"
-    }
-    if (choice === user){
-        alert(`You picked ${choice}. The computer picked ${computer}, it is a tie`)
-    }
-    else {
-        if (choice === "Rock") and (computer === "Paper")
-        {
-            alert(`You picked ${choice}. The computer picked ${computer}, you lose`)
+    }   
+
+    if (computer === "Rock"){
+        if (choice === "Paper"){
+            alert(`You picked ${choice} and the computer picked ${computer}. You win!`)
+        } else if (choice === "Rock"){
+            alert(`You picked ${choice} and the computer picked ${computer}. It's a tie!`)
+        } else if (choice === "Scissors"){
+            alert(`You picked ${choice} and the computer picked ${computer}. You lose!`)
         }
-        if (choice === "Paper") and (computer === "Scissors")
-        {
-            alert(`You picked ${choice}. The computer picked ${computer}, you lose`)
+    }
+    else if  (computer === "Paper"){
+        if (choice === "Paper"){
+            alert(`You picked ${choice} and the computer picked ${computer}. It's a tie!`)
+        } else if (choice === "Rock"){
+            alert(`You picked ${choice} and the computer picked ${computer}. You lose!`)
+        } else if (choice === "Scissors"){
+            alert(`You picked ${choice} and the computer picked ${computer}. You win!`)
         }
-        if (choice === "Scissors") and (computer === "Rock")
-        {
-            alert(`You picked ${choice}. The computer picked ${computer}, you lose`)
+    }
+    else if (computer === "Scissors"){
+        if (choice === "Rock"){
+            alert(`You picked ${choice} and the computer picked ${computer}. You win!`)
+        } else if (choice === "Scissors"){
+            alert(`You picked ${choice} and the computer picked ${computer}. It's a tie!`)
+        } else if (choice === "Paper"){
+            alert(`You picked ${choice} and the computer picked ${computer}. You lose!`)
         }
     }
 }
