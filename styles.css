@@ -1,4 +1,19 @@
 body {
-    background-color: black;
+    background-color: white;
+    color: black;
+}
+
+img {
+    background-color: #ffffff;
     color: white;
+    width: 30px;
+    height: auto;
+    font-size: 20px;
+}
+
+button {
+    border-radius: 50%;
+    background-color: white;
+    width: 100px;
+    height: 100px;
 }
