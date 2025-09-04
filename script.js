@@ -1,3 +1,4 @@
+/*
 let wins = 0;
 let losses = 0;
 let ties = 0;
@@ -62,3 +63,17 @@ function pick(choice) {
         }
     }
 }
+*/
+
+/*a
+const hour = 9
+
+if (6 < hour < 12) {
+    console.log("Good morning!")
+} else if (13 < hour < 17 ){
+    console.log("Godd afternoon!")
+} else {
+    console.log("Good evening!")
+}
+*/
+
