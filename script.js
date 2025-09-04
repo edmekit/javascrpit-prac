@@ -66,14 +66,25 @@ function pick(choice) {
 */
 
 /*a
-const hour = 9
+const name = "Edmarc";
+const hour = 9;
 
 if (6 < hour < 12) {
-    console.log("Good morning!")
+    console.log("Good morning, ${name}!");
 } else if (13 < hour < 17 ){
-    console.log("Godd afternoon!")
+    console.log("Godd afternoon, ${name}!");
 } else {
-    console.log("Good evening!")
+    console.log("Good evening, ${name}!");
 }
 */
 
+/*
+const age = 5;
+const holiday = false;
+
+if ((age <= 6 || age >= 65) && holiday) {
+    console.log('Discount');
+} else {
+    console.log('No discount');
+}
+*/
