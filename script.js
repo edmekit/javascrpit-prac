@@ -88,3 +88,26 @@ if ((age <= 6 || age >= 65) && holiday) {
     console.log('No discount');
 }
 */
+
+/*
+function coinFlip(user){
+    const guess = user;
+    let num = Math.random();
+    
+    if (num < 0.5) {
+        const result = "heads";
+        if (guess === result) {
+        alert(`You guessed ${guess} and the result was ${result}. You win!`);
+    } else {
+        alert(`You guessed ${guess} and the result was ${result}. You lose!`);
+    }
+    } else {
+        const result = "tails";
+        if (guess === result) {
+        alert(`You guessed ${guess} and the result was ${result}. You win!`);
+    } else {
+        alert(`You guessed ${guess} and the result was ${result}. You lose!`);
+    }
+    }
+}
+*/
