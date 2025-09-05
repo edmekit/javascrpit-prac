@@ -1,4 +1,5 @@
 /*
+// Rock, Paper, Scissors
 let wins = 0;
 let losses = 0;
 let ties = 0;
@@ -65,7 +66,8 @@ function pick(choice) {
 }
 */
 
-/*a
+/*
+// time checker
 const name = "Edmarc";
 const hour = 9;
 
@@ -79,6 +81,7 @@ if (6 < hour < 12) {
 */
 
 /*
+// discount
 const age = 5;
 const holiday = false;
 
@@ -90,24 +93,22 @@ if ((age <= 6 || age >= 65) && holiday) {
 */
 
 /*
+// coin flip
 function coinFlip(user){
     const guess = user;
+    let result;
     let num = Math.random();
     
     if (num < 0.5) {
-        const result = "heads";
-        if (guess === result) {
+        result = "heads";
+    } else {
+        result = "tails";
+    }
+
+    if (guess === result) {
         alert(`You guessed ${guess} and the result was ${result}. You win!`);
     } else {
         alert(`You guessed ${guess} and the result was ${result}. You lose!`);
-    }
-    } else {
-        const result = "tails";
-        if (guess === result) {
-        alert(`You guessed ${guess} and the result was ${result}. You win!`);
-    } else {
-        alert(`You guessed ${guess} and the result was ${result}. You lose!`);
-    }
     }
 }
 */
