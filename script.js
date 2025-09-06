@@ -92,7 +92,7 @@ if ((age <= 6 || age >= 65) && holiday) {
 }
 */
 
-/*
+
 // coin flip
 function coinFlip(user){
     const guess = user;
@@ -111,4 +111,3 @@ function coinFlip(user){
         alert(`You guessed ${guess} and the result was ${result}. You lose!`);
     }
 }
-*/
