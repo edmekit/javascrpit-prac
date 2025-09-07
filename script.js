@@ -1,8 +1,10 @@
-/*
+
 // Rock, Paper, Scissors
-let wins = 0;
-let losses = 0;
-let ties = 0;
+let score = JSON.parse(localStorage.getItem('score')) || { wins: 0, losses: 0, ties: 0 };
+
+document.getElementById("wins").innerText = `Wins: ${wins}`;
+document.getElementById("losses").innerText = `Losses: ${losses}`;
+document.getElementById("ties").innerText = `Ties: ${ties}`;
 
 function pick(choice) {
     let num = Math.random();
@@ -18,53 +20,47 @@ function pick(choice) {
 
     if (computer === "Rock") {
         if (choice === "Paper") {
-            wins++;
-            document.getElementById("wins").innerText = `Wins: ${wins}`;
+           score.wins++;          
             alert(`You picked ${choice} and the computer picked ${computer}. You win!`);
         } else if (choice === "Rock") {
-            ties++;
-            document.getElementById("ties").innerText = `Ties: ${ties}`;
+            score.ties++;            
             alert(`You picked ${choice} and the computer picked ${computer}. It's a tie!`);
         } else {
-            losses++;
-            document.getElementById("losses").innerText = `Losses: ${losses}`;
+            score.losses++;            
             alert(`You picked ${choice} and the computer picked ${computer}. You lose!`);
         }
     }
-
     else if (computer === "Paper") {
         if (choice === "Paper") {
-            ties++;
-            document.getElementById("ties").innerText = `Ties: ${ties}`;
+            score.ties++;            
             alert(`You picked ${choice} and the computer picked ${computer}. It's a tie!`);
         } else if (choice === "Rock") {
-            losses++;
-            document.getElementById("losses").innerText = `Losses: ${losses}`;
+            score.losses++;            
             alert(`You picked ${choice} and the computer picked ${computer}. You lose!`);
         } else {
-            wins++;
-            document.getElementById("wins").innerText = `Wins: ${wins}`;
+            score.wins++;            
             alert(`You picked ${choice} and the computer picked ${computer}. You win!`);
+        }
+    }
+    else if (computer === "Scissors") {
+        if (choice === "Rock") {
+            score.wins++;            
+            alert(`You picked ${choice} and the computer picked ${computer}. You win!`);
+        } else if (choice === "Scissors") {
+            score.ties++;
+            alert(`You picked ${choice} and the computer picked ${computer}. It's a tie!`);
+        } else {
+            score.losses++;            
+            alert(`You picked ${choice} and the computer picked ${computer}. You lose!`);
         }
     }
 
-    else if (computer === "Scissors") {
-        if (choice === "Rock") {
-            wins++;
-            document.getElementById("wins").innerText = `Wins: ${wins}`;
-            alert(`You picked ${choice} and the computer picked ${computer}. You win!`);
-        } else if (choice === "Scissors") {
-            ties++;
-            document.getElementById("ties").innerText = `Ties: ${ties}`;
-            alert(`You picked ${choice} and the computer picked ${computer}. It's a tie!`);
-        } else {
-            losses++;
-            document.getElementById("losses").innerText = `Losses: ${losses}`;
-            alert(`You picked ${choice} and the computer picked ${computer}. You lose!`);
-        }
-    }
+    document.getElementById("wins").innerText = `Wins: ${wins}`;
+    document.getElementById("losses").innerText = `Losses: ${losses}`;
+    document.getElementById("ties").innerText = `Ties: ${ties}`;
+
+    localStorage.setItem('score', JSON.stringify(score));
 }
-*/
 
 /*
 // time checker
