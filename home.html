@@ -13,7 +13,8 @@
     <button onclick="coinFlip('tails')">tails</button>
     <button onclick="
         score.wins = 0;
-        score.losses = 0;" >reset</button>
+        score.losses = 0;
+        localStorage.removeItem('score');" >reset</button>
     <script src="script.js"></script>
 </body>
 </html>
