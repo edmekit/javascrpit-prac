@@ -97,6 +97,9 @@ if ((age <= 6 || age >= 65) && holiday) {
 
 let score = JSON.parse(localStorage.getItem('score')) || { wins: 0, losses: 0 };
 
+document.getElementById('wins').innerText = `Wins: ${score.wins}`
+document.getElementById('losses').innerText = `Losses: ${score.losses}`
+
 function coinFlip(user){
 
     const guess = user;
@@ -111,13 +114,16 @@ function coinFlip(user){
 
     if (guess === result) {
         score.wins += 1;
-        alert(`You guessed ${guess} and the result was ${result}. You win!
-Wins: ${score.wins} Losses: ${score.losses}`);
+        alert(`You guessed ${guess} and the result was ${result}. You win!`);
+       
     } else {
         score.losses += 1;
-        alert(`You guessed ${guess} and the result was ${result}. You lose!
-Wins: ${score.wins} Losses: ${score.losses}`);
+        alert(`You guessed ${guess} and the result was ${result}. You lose!`);
+        
     }
+     
+    document.getElementById('wins').innerText = `Wins: ${score.wins}`
+    document.getElementById('losses').innerText = `Losses: ${score.losses}`
 
     localStorage.setItem('score', JSON.stringify(score));
 }

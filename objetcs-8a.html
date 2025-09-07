@@ -34,9 +34,25 @@
             }
         }
 
-        const cheap = comparePrice(football, volleyball)
+        function isSame(product1, product2) {
+            if (product1.price === product2.price) {
+                return true
+            } else {
+                return false
+            }
+        } 
+
+        function multiplyWord (word, times) {
+            console.log(word.repeat(times))
+        }
+
+        const cheap = comparePrice(basketball, volleyball).toLowerCase()
+
+        const same = isSame(football, volleyball)
 
         console.log(cheap)
+        console.log(same)
+        multiplyWord('helo', 5)
         
     </script>
 </body>
