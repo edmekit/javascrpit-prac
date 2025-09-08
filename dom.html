@@ -11,12 +11,19 @@
      sub('.subbtn');
     ">Subscribe</button>
 
+    
+    <p>Coin flip</p>
+    <a href="home.html">Click here</a>
+    <p></p>
+
     <p>Amazon Shipping Calculator</p>
     <p>Orders under $40 = +$10 Shipping</p>
     <p>Orders over $40 = Free Shipping</p>
 
-    <p>Coin flip</p>
-    <a href="home.html">Click here</a>
+
+    <input placeholder="Cost of order" class="cost">
+    <button onclick="calc()">Calculate</button>
+    <p class="total">Total Cost: $</p>
 
     <script>
         function sub(btn) {
@@ -30,6 +37,17 @@
 
         }
 
+        function calc() {
+            let cost = document.querySelector('.cost').value
+            cost = Number(cost)
+
+            if (cost < 40) {
+                cost += 10;
+                document.querySelector('.total').innerHTML = `Total Cost: $${cost}`
+            } else {
+                document.querySelector('.total').innerHTML = `Free Shipping.Total Cost: $${cost}`
+            }
+        }
 
 
     </script>
