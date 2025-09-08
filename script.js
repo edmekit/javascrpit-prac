@@ -113,12 +113,15 @@ function coinFlip(user){
 
     if (guess === result) {
         score.wins += 1;
-        alert(`You guessed ${guess} and the result was ${result}. You win!`);
+        document.querySelector('.res').innerHTML = `Result: You win.`;
+        document.querySelector('.you').innerHTML = `You: ${guess}`;
+        document.querySelector('.computer').innerHTML = `Result: ${result}`;
        
     } else {
         score.losses += 1;
-        alert(`You guessed ${guess} and the result was ${result}. You lose!`);
-        
+        document.querySelector('.res').innerHTML = `Result: You lose.`;
+        document.querySelector('.you').innerHTML = `You: ${guess}`;
+        document.querySelector('.computer').innerHTML = `Result: ${result}`;
     }
      
     document.querySelector('#wins').innerText = `Wins: ${score.wins}`
