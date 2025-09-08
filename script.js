@@ -91,13 +91,13 @@ if ((age <= 6 || age >= 65) && holiday) {
 }
 */
 
-/*
+
 // coin flip
 
 let score = JSON.parse(localStorage.getItem('score')) || { wins: 0, losses: 0 };
 
-document.getElementById('wins').innerText = `Wins: ${score.wins}`
-document.getElementById('losses').innerText = `Losses: ${score.losses}`
+document.querySelector('#wins').innerText = `Wins: ${score.wins}`
+document.querySelector('#losses').innerText = `Losses: ${score.losses}`
 
 function coinFlip(user){
 
@@ -121,9 +121,9 @@ function coinFlip(user){
         
     }
      
-    document.getElementById('wins').innerText = `Wins: ${score.wins}`
-    document.getElementById('losses').innerText = `Losses: ${score.losses}`
+    document.querySelector('#wins').innerText = `Wins: ${score.wins}`
+    document.querySelector('#losses').innerText = `Losses: ${score.losses}`
 
     localStorage.setItem('score', JSON.stringify(score));
 }
-*/
+
