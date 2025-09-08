@@ -1,10 +1,10 @@
-
+/*
 // Rock, Paper, Scissors
 let score = JSON.parse(localStorage.getItem('score')) || { wins: 0, losses: 0, ties: 0 };
 
-document.getElementById("wins").innerText = `Wins: ${wins}`;
-document.getElementById("losses").innerText = `Losses: ${losses}`;
-document.getElementById("ties").innerText = `Ties: ${ties}`;
+document.getElementById("wins").innerText = `Wins: ${score.wins}`;
+document.getElementById("losses").innerText = `Losses: ${score.losses}`;
+document.getElementById("ties").innerText = `Ties: ${score.ties}`;
 
 function pick(choice) {
     let num = Math.random();
@@ -61,6 +61,9 @@ function pick(choice) {
 
     localStorage.setItem('score', JSON.stringify(score));
 }
+*/
+
+
 
 /*
 // time checker
