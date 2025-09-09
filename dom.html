@@ -21,7 +21,8 @@
     <p>Orders over $40 = Free Shipping</p>
 
 
-    <input placeholder="Cost of order" class="cost">
+    <input placeholder="Cost of order" class="cost" onkeydown=" 
+    if (event.key === 'Enter') calc()">
     <button onclick="calc()">Calculate</button>
     <p class="total">Total Cost: $</p>
 
