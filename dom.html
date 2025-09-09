@@ -26,6 +26,26 @@
     <button onclick="calc()">Calculate</button>
     <p class="total">Total Cost: $</p>
 
+    <input placeholder="Enter your name" class="name"
+    onkeydown=" if (event.key === 'Enter') getName()">
+    <button onclick="getName()" >Submit</button> 
+    <p class="names"></p>
+
+    <input placeholder="Type" onkeyup="
+    if (event.key === 'Backspace') {
+        let typed = document.querySelector('.typed').innerHTML
+        typed = typed.slice(0, -1)
+        document.querySelector('.typed').innerHTML = typed
+    }
+    else if (event.key === 'Enter') {
+        document.querySelector('.typed').innerHTML = '';s
+    } else {
+        document.querySelector('.typed').innerHTML += event.key
+    }">
+    
+    
+    <p class="typed"></p>
+
     <script>
         function sub(btn) {
             const buttonElem = document.querySelector(btn);
@@ -40,14 +60,30 @@
 
         function calc() {
             let cost = document.querySelector('.cost').value
-            cost = Number(cost)
+            cost = Number(cost);
 
-            if (cost < 40) {
+            if (cost <= 0) {
+                document.querySelector('.total').innerHTML = 'Empty Cart.';
+            } else if (cost < 40) {
                 cost += 10;
-                document.querySelector('.total').innerHTML = `Total Cost: $${cost}`
+                cost = cost.toFixed(2);
+                document.querySelector('.total').innerHTML = `Total Cost: $${cost}`;
             } else {
-                document.querySelector('.total').innerHTML = `Free Shipping.Total Cost: $${cost}`
+                document.querySelector('.total').innerHTML = `Free Shipping.Total Cost: $${cost}`;
             }
+        }
+
+        function getName() {
+            const name = document.querySelector('.name').value
+            document.querySelector('.names').innerHTML = `Your name is, ${name}`
+        }
+
+        function clear(className) {
+            document.querySelector(className).innerHTML = '';
+        }
+
+        function type(event) {
+            
         }
 
 
