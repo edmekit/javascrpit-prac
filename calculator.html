@@ -6,16 +6,16 @@
     <title>Document</title>
 </head>
 <body>
-    <button>1</button>
-    <button>2</button>
-    <button>3</button>
-    <button>4</button>
-    <button>5</button>
-    <button>6</button>
-    <button>7</button>
-    <button>8</button>
-    <button>9</button>
-    <button>0</button>
+    <button onclick="handleNums('.num1')" class="num1">1</button>
+    <button onclick="handleNums('.num2')" class="num2">2</button>
+    <button onclick="handleNums('.num3')" class="num3">3</button>
+    <button onclick="handleNums('.num4')" class="num4">4</button>
+    <button onclick="handleNums('.num5')" class="num5">5</button>
+    <button onclick="handleNums('.num6')" class="num6">6</button>
+    <button onclick="handleNums('.num7')" class="num7">7</button>
+    <button onclick="handleNums('.num8')" class="num8">8</button>
+    <button onclick="handleNums('.num9')" class="num9">9</button>
+    <button onclick="handleNums('.num0')" class="num0">0</button>
 
     <button>+</button>
     <button>-</button>
@@ -25,6 +25,11 @@
     <p class="box"></p>
 
     <script>
+        function handleNums(className) {
+            let num = document.querySelector(className).innerHTML;
+            num = Number(num);
+            document.querySelector('.box').innerHTML += num
+        }
 
     </script>
     
