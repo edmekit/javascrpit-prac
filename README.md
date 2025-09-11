@@ -7,3 +7,5 @@ also practiced some stuff like booleans and if-else shorthands pretty cool
 uhuhhh learned json and localStorage, cool stuff, basically yoou can save what happened and access it latur
 
 uhh huhhh DOM id pretty cool lets u get whatever you want and control it
+
+im so tama today 
