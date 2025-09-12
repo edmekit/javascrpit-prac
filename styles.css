@@ -17,3 +17,12 @@ button {
     width: 100px;
     height: 100px;
 }
+
+h1 {
+    position: absolute;
+    left: 40%;
+    top: 7%;
+    font-family: 'Monserrat', sans-serif;
+    font-size: 65px;
+    color: black;
+}
