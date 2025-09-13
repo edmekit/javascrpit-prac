@@ -19,3 +19,18 @@ body {
     background-color: rgb(227, 221, 221);
     color: black;
 }
+
+.cost {
+    font-size: 15px;
+    padding: 10px;
+    height: 20px;
+}
+
+.calc {
+    font-size: 15px;
+    border: none;
+    background-color: green;
+    color: white;
+    padding: 10px;
+    height: 45px;
+}
