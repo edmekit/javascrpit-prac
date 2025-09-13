@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styler.css">
     <title>DOM Practice</title>
 </head>
 <body>
@@ -52,10 +53,11 @@
     
             if (buttonElem.innerHTML === 'Subscribe') {
                 buttonElem.innerHTML = 'Subscribed';
+                buttonElem.classList.add('is_sub');
             } else {
                 buttonElem.innerHTML = 'Subscribe';
+                buttonElem.classList.remove('is_sub');
             }
-
         }
 
         function calc() {
