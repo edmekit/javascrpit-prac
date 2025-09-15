@@ -1,21 +1,44 @@
 
 const todos = [];
 
-function addTodo() {
-    let todo = document.querySelector('.todo');
-    const inputTodo = todo.value
-
-    todos.push(inputTodo);
-    todo.value = ' ';
-
+function renderTodo() {
     let todoListHTML = '';
 
     for (let i = 0; i < todos.length; i++) {
-        todoListHTML += `<p>${todos[i]}</p>`; 
+        const { name, date } = todos[i];
+        todoListHTML += 
+        `
+        <div class="name">${name}</div> 
+        <div class="date">${date}</div>
+        <div>
+        <button class="delbtn" onclick="
+        deleteTodo(${i})">Del</button>
+        </div>`; 
     }
-
+    
     document.querySelector('.list').innerHTML = todoListHTML
+}
 
+function addTodo() {
+    let todo = document.querySelector('.todo');
+    let inputdate = document.querySelector('.dates');
+    const name = todo.value
+    const date = inputdate.value
+
+    todos.push({
+        name,
+        date
+    });
+
+    todo.value = ' ';
+    renderTodo();
+}
+
+
+
+function deleteTodo(index) {
+    todos.splice(index, 1);
+    renderTodo();
 }
 
 /*
