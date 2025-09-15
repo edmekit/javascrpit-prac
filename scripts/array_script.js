@@ -35,9 +35,8 @@ function addTodo() {
 }
 
 
-
-function deleteTodo(index) {
-    todos.splice(index, 1);
+function deleteTodo(i) {
+    todos.splice(i, 1);
     renderTodo();
 }
 
