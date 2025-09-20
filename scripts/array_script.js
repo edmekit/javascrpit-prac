@@ -79,7 +79,6 @@ function addBy(arr, byNum) {
     
     newNums.push(arr[i] + byNum);
     }
-
     console.log(newNums);
 }
 
@@ -87,7 +86,6 @@ function addArray (arr1, arr2) {
     for (let i = 0; i < arr1.length; i++) {
         newNums.push(arr1[i] + arr2[i]);
     }
-
     console.log(newNums);
 }
 
