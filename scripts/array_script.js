@@ -1,5 +1,5 @@
 
-const todos = [];
+const todos = JSON.parse(localStorage.getItem('todos')) || [];
 
 function renderTodo() {
     let todoListHTML = '';
@@ -17,6 +17,8 @@ function renderTodo() {
     }
     
     document.querySelector('.list').innerHTML = todoListHTML
+
+    localStorage.setItem('todos', JSON.stringify(todos));
 }
 
 function addTodo() {
@@ -39,6 +41,8 @@ function deleteTodo(i) {
     todos.splice(i, 1);
     renderTodo();
 }
+
+renderTodo();
 
 /*
 const nums = [10, 20,30, 90, 76]

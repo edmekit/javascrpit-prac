@@ -83,7 +83,6 @@ for (let i = 1; i <= 20; i++) {
         console.log(i);
     }
 }
-*/
 
 const foods = ['apple','egg', 'ham', 'apple', 'egg', 'apple', 'egg'];
 
@@ -107,3 +106,4 @@ function unique(arr) {
 }
 
 console.log(unique(foods))
+*/
