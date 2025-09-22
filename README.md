@@ -9,3 +9,7 @@ uhuhhh learned json and localStorage, cool stuff, basically yoou can save what h
 uhh huhhh DOM id pretty cool lets u get whatever you want and control it
 
 im so tama today 
+
+learned generating html through the for loops in js cool stuff
+
+put it in localStroage, the todos 
