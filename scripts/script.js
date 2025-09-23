@@ -141,3 +141,19 @@ function chooseMove () {
     return result
 }
 
+let isautoplay = false
+let intervalID;
+
+function autoplay() {
+
+    if (!isautoplay) {
+        intervalID = setInterval(() => coinFlip(chooseMove()), 2000);
+        isautoplay = true;
+    } else {
+        clearInterval(intervalID);
+        isautoplay = false
+    }
+
+    
+}
+
