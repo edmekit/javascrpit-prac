@@ -1,4 +1,4 @@
-/*
+
 let num = Math.floor(Math.random() * 100);
 let attempts = 0
 
@@ -29,7 +29,8 @@ function getGuess() {
         document.querySelector('.result').innerHTML = `Input a number!`
     }
 }
-*/
+
+
 
 /*
 function search(arr) {

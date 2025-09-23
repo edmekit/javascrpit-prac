@@ -130,3 +130,14 @@ function coinFlip(user){
     localStorage.setItem('score', JSON.stringify(score));
 }
 
+function chooseMove () {
+    let num = Math.random();
+    
+    if (num < 0.5) {
+        result = 'heads';
+    } else {
+        result = 'tails';
+    }
+    return result
+}
+
