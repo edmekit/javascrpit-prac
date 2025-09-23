@@ -17,7 +17,7 @@
         document.querySelector('#wins').innerText = `Wins: ${score.wins}`;
         document.querySelector('#losses').innerText = `Losses: ${score.losses}`;
         localStorage.removeItem('score');" >reset</button>
-    <button onclick="setInterval(() => coinFlip(chooseMove()), 2000)">Auto Play</button>
+    <button onclick="autoplay()">Auto Play</button>
     <p class="res">Result:</p>
     <p class="you">You:</p>
     <p class="computer">Computer:</p>
