@@ -46,6 +46,35 @@ function deleteTodo(i) {
 
 renderTodo();
 
+function startTimer() {
+    const btn = document.querySelector('.start');
+    const stat = document.querySelector('.show');
+    stat.innerHTML = "Added to cart";
+    setTimeout(() => {
+        stat.innerHTML = ''
+    }, 2000);
+}
+
+let title = false
+let mess = 2
+
+
+setInterval(() => {
+    if (mess > 0) {
+        if (!title) {
+        document.title = `(${mess}) New Messages`
+        title = true
+    } else {
+        document.title = 'App'
+        title = false
+        }
+    } else {
+        document.title = 'App'
+        title = false
+    }
+}, 1000);
+
+
 /*
 const nums = [10, 20,30, 90, 76]
 
