@@ -2,9 +2,9 @@
 // Rock, Paper, Scissors
 let score = JSON.parse(localStorage.getItem('score')) || { wins: 0, losses: 0, ties: 0 };
 
-document.getElementById("wins").innerText = `Wins: ${score.wins}`;
-document.getElementById("losses").innerText = `Losses: ${score.losses}`;
-document.getElementById("ties").innerText = `Ties: ${score.ties}`;
+document.querySelector("#wins").innerText = `Wins: ${score.wins}`;
+document.querySelector("#losses").innerText = `Losses: ${score.losses}`;
+document.querySelector("#ties").innerText = `Ties: ${score.ties}`;
 
 function pick(choice) {
     
@@ -47,9 +47,9 @@ function pick(choice) {
         }
     }
 
-    document.getElementById("wins").innerText = `Wins: ${wins}`;
-    document.getElementById("losses").innerText = `Losses: ${losses}`;
-    document.getElementById("ties").innerText = `Ties: ${ties}`;
+    document.querySelector("#wins").innerText = `Wins: ${score.wins}`;
+    document.querySelector("#losses").innerText = `Losses: ${score.losses}`;
+    document.querySelector("#ties").innerText = `Ties: ${score.ties}`;
 
     localStorage.setItem('score', JSON.stringify(score));
 }
@@ -69,10 +69,11 @@ function pickComputer() {
 }
 
 let autoplaying = false;
+let intID;
 
 function autoplay() {
-    if (!autoplay) {
-        let intID = setInterval(() => pick(pickComputer()), 2000);
+    if (!autoplaying) {
+        intID = setInterval(() => pick(pickComputer()), 2000);
         autoplaying = true; 
     } else {
         clearInterval(intID);
