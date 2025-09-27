@@ -1,4 +1,4 @@
-/*
+
 // Rock, Paper, Scissors
 let score = JSON.parse(localStorage.getItem('score')) || { wins: 0, losses: 0, ties: 0 };
 
@@ -7,16 +7,8 @@ document.getElementById("losses").innerText = `Losses: ${score.losses}`;
 document.getElementById("ties").innerText = `Ties: ${score.ties}`;
 
 function pick(choice) {
-    let num = Math.random();
-    let computer;
-
-    if (num <= 0.3) {
-        computer = "Rock";
-    } else if (num <= 0.6) {
-        computer = "Paper";
-    } else {
-        computer = "Scissors";
-    }
+    
+    const computer = pickComputer();
 
     if (computer === "Rock") {
         if (choice === "Paper") {
@@ -61,8 +53,32 @@ function pick(choice) {
 
     localStorage.setItem('score', JSON.stringify(score));
 }
-*/
 
+function pickComputer() {
+    let num = Math.random();
+    let computer;
+
+    if (num <= 0.3) {
+        computer = "Rock";
+    } else if (num <= 0.6) {
+        computer = "Paper";
+    } else {
+        computer = "Scissors";
+    }
+    return computer;
+}
+
+let autoplaying = false;
+
+function autoplay() {
+    if (!autoplay) {
+        let intID = setInterval(() => pick(pickComputer()), 2000);
+        autoplaying = true; 
+    } else {
+        clearInterval(intID);
+        autoplaying = false;
+    }
+}
 
 
 /*
@@ -93,7 +109,7 @@ if ((age <= 6 || age >= 65) && holiday) {
 
 
 // coin flip
-
+/*
 let score = JSON.parse(localStorage.getItem('score')) || { wins: 0, losses: 0 };
 
 document.querySelector('#wins').innerText = `Wins: ${score.wins}`
@@ -156,4 +172,5 @@ function autoplay() {
 
     
 }
+    */
 
