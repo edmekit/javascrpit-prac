@@ -3,9 +3,9 @@ const todos = JSON.parse(localStorage.getItem('todos')) || [];
 
 function renderTodo() {
     let todoListHTML = '';
-
-    for (let i = 0; i < todos.length; i++) {
-        const { name, date } = todos[i];
+    
+    todos.forEach((todo, i) =>  {
+        const { name, date } = todo;
         todoListHTML += 
         `
         <div class="name">${name}</div> 
@@ -14,7 +14,9 @@ function renderTodo() {
         <button class="delbtn" onclick="
         deleteTodo(${i})">Del</button>
         </div>`; 
-    }
+    })
+
+    
     
     document.querySelector('.list').innerHTML = todoListHTML
 

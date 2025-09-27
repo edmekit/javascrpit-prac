@@ -1,4 +1,4 @@
-
+/*
 // Rock, Paper, Scissors
 let score = JSON.parse(localStorage.getItem('score')) || { wins: 0, losses: 0, ties: 0 };
 
@@ -80,6 +80,7 @@ function autoplay() {
         autoplaying = false;
     }
 }
+*/
 
 
 /*
@@ -110,7 +111,7 @@ if ((age <= 6 || age >= 65) && holiday) {
 
 
 // coin flip
-/*
+
 let score = JSON.parse(localStorage.getItem('score')) || { wins: 0, losses: 0 };
 
 document.querySelector('#wins').innerText = `Wins: ${score.wins}`
@@ -170,8 +171,10 @@ function autoplay() {
         clearInterval(intervalID);
         isautoplay = false
     }
-
-    
 }
-    */
 
+const tasks = ['make', 'bake', 'cake']
+    
+tasks.forEach((task, index) => {
+    console.log(task, index)
+})
