@@ -111,11 +111,28 @@ if ((age <= 6 || age >= 65) && holiday) {
 
 
 // coin flip
+const reset = document.querySelector('.reset');
+const wins = document.querySelector('#wins');
+const losses = document.querySelector('#losses');
+const res = document.querySelector('.res');
+const you = document.querySelector('.you');
+const comp = document.querySelector('.computer');
+
+reset.addEventListener('click', () => {
+    score.wins = 0;
+    score.losses = 0;
+    wins.innerText = `Wins: ${score.wins}`;
+    losses.innerText = `Losses: ${score.losses}`;
+    res.innerText = 'Result: ';
+    you.innerText = 'You: ';
+    comp.innerText = 'Computer: ';
+    localStorage.removeItem('score');
+})
 
 let score = JSON.parse(localStorage.getItem('score')) || { wins: 0, losses: 0 };
 
-document.querySelector('#wins').innerText = `Wins: ${score.wins}`
-document.querySelector('#losses').innerText = `Losses: ${score.losses}`
+wins.innerText = `Wins: ${score.wins}`
+losses.innerText = `Losses: ${score.losses}`
 
 function coinFlip(user){
 
@@ -131,19 +148,19 @@ function coinFlip(user){
 
     if (guess === result) {
         score.wins += 1;
-        document.querySelector('.res').innerHTML = `Result: You win.`;
-        document.querySelector('.you').innerHTML = `You: ${guess}`;
-        document.querySelector('.computer').innerHTML = `Result: ${result}`;
+        res.innerHTML = `Result: You win.`;
+        you.innerHTML = `You: ${guess}`;
+        comp.innerHTML = `Computer: ${result}`;
        
     } else {
         score.losses += 1;
-        document.querySelector('.res').innerHTML = `Result: You lose.`;
-        document.querySelector('.you').innerHTML = `You: ${guess}`;
-        document.querySelector('.computer').innerHTML = `Result: ${result}`;
+        res.innerHTML = `Result: You lose.`;
+        you.innerHTML = `You: ${guess}`;
+        comp.innerHTML = `Computer: ${result}`;
     }
      
-    document.querySelector('#wins').innerText = `Wins: ${score.wins}`
-    document.querySelector('#losses').innerText = `Losses: ${score.losses}`
+    wins.innerText = `Wins: ${score.wins}`
+    losses.innerText = `Losses: ${score.losses}`
 
     localStorage.setItem('score', JSON.stringify(score));
 }
@@ -162,8 +179,10 @@ function chooseMove () {
 let isautoplay = false
 let intervalID;
 
-function autoplay() {
+const play = document.querySelector('.autoplay');
 
+
+play.addEventListener('click', () => {
     if (!isautoplay) {
         intervalID = setInterval(() => coinFlip(chooseMove()), 2000);
         isautoplay = true;
@@ -171,8 +190,7 @@ function autoplay() {
         clearInterval(intervalID);
         isautoplay = false
     }
-}
+})
 
-const tasks = ['make', 'bake', 'cake']
+
     
-tasks.forEach((task, index) => console.log(task, index));
