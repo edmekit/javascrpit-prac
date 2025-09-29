@@ -4,21 +4,24 @@ const todos = JSON.parse(localStorage.getItem('todos')) || [];
 function renderTodo() {
     let todoListHTML = '';
     
-    todos.forEach((todo, i) =>  {
+    todos.forEach((todo) =>  {
         const { name, date } = todo;
         todoListHTML += 
         `
         <div class="name">${name}</div> 
         <div class="date">${date}</div>
         <div>
-        <button class="delbtn" onclick="
-        deleteTodo(${i})">Del</button>
+        <button class="delbtn">Del</button>
         </div>`; 
     })
 
-    
-    
     document.querySelector('.list').innerHTML = todoListHTML
+
+    document.querySelectorAll('.delbtn').forEach((btn, i) => {
+        btn.addEventListener('click', () => {
+            deleteTodo(i);
+        })
+    })
 
     localStorage.setItem('todos', JSON.stringify(todos));
 }

@@ -120,6 +120,20 @@ const comp = document.querySelector('.computer');
 const heads = document.querySelector('.heads');
 const tails = document.querySelector('.tails');
 
+document.body.addEventListener('keydown', (event) => {
+    if (event.key === 'h') {
+        coinFlip('heads')
+    } else if (event.key === 't') {
+        coinFlip('tails')
+    }
+})
+
+document.body.addEventListener('keydown', (event) => {
+    if (event.key === 'a') {
+        autoplay()
+    }
+})
+
 reset.addEventListener('click', () => {
     score.wins = 0;
     score.losses = 0;
@@ -187,16 +201,35 @@ let intervalID;
 
 const play = document.querySelector('.autoplay');
 
-
-play.addEventListener('click', () => {
+const autoplay = () => {
     if (!isautoplay) {
         intervalID = setInterval(() => coinFlip(chooseMove()), 2000);
         isautoplay = true;
+        play.innerHTML = 'Stop autoplay';
     } else {
         clearInterval(intervalID);
         isautoplay = false
+        play.innerHTML = 'Autoplay';
     }
-})
+}
 
+play.addEventListener('click', autoplay)
 
+/*
+function removeFood(foods, food) {
+    removed = 0
+    new_array = foods.filter((f) => {
+        if (removed === 2) {
+            return true
+        } else if (f === food) {
+            removed += 1
+            return false
+        } else {
+            return true
+        }
+    })
+    return new_array
+}
     
+console.log(removeFood(['apple', 'banana', 'apple', 'banana', 'mango', 'apple', 'banana'], 'apple'))
+*/
