@@ -175,6 +175,4 @@ function autoplay() {
 
 const tasks = ['make', 'bake', 'cake']
     
-tasks.forEach((task, index) => {
-    console.log(task, index)
-})
+tasks.forEach((task, index) => console.log(task, index));

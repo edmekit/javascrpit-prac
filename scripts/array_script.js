@@ -1,4 +1,4 @@
-
+const add = document.querySelector('.add');
 const todos = JSON.parse(localStorage.getItem('todos')) || [];
 
 function renderTodo() {
@@ -23,7 +23,8 @@ function renderTodo() {
     localStorage.setItem('todos', JSON.stringify(todos));
 }
 
-function addTodo() {
+
+add.addEventListener('click', () => {
     let todo = document.querySelector('.todo');
     let inputdate = document.querySelector('.dates');
     const name = todo.value
@@ -36,7 +37,7 @@ function addTodo() {
 
     todo.value = ' ';
     renderTodo();
-}
+})
 
 
 function deleteTodo(i) {
