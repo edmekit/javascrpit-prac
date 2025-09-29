@@ -117,6 +117,8 @@ const losses = document.querySelector('#losses');
 const res = document.querySelector('.res');
 const you = document.querySelector('.you');
 const comp = document.querySelector('.computer');
+const heads = document.querySelector('.heads');
+const tails = document.querySelector('.tails');
 
 reset.addEventListener('click', () => {
     score.wins = 0;
@@ -164,6 +166,10 @@ function coinFlip(user){
 
     localStorage.setItem('score', JSON.stringify(score));
 }
+
+heads.addEventListener('click', () => coinFlip('heads'));
+tails.addEventListener('click', () => coinFlip('tails'));
+
 
 function chooseMove () {
     let num = Math.random();
