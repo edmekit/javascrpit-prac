@@ -13,3 +13,5 @@ im so tama today
 learned generating html through the for loops in js cool stuff
 
 put it in localStroage, the todos 
+
+im tired boss
