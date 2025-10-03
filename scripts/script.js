@@ -119,6 +119,21 @@ const you = document.querySelector('.you');
 const comp = document.querySelector('.computer');
 const heads = document.querySelector('.heads');
 const tails = document.querySelector('.tails');
+const resetScore = () => {
+    reset.innerHTML = `<p>Are you sure?</p>
+    <button class="yes">Yes</button>
+    <button class="no">No</button>`
+    const yes = document.querySelector('.yes');
+    const no = document.querySelector('.no');
+
+    yes.addEventListener('click', () => {
+        resetScore();
+    })
+
+    no.addEventListener('click', () => {
+        reset.innerHTML = `<p></p>`
+    })
+}
 
 document.body.addEventListener('keydown', (event) => {
     if (event.key === 'h') {
@@ -134,15 +149,12 @@ document.body.addEventListener('keydown', (event) => {
     }
 })
 
-reset.addEventListener('click', () => {
-    score.wins = 0;
-    score.losses = 0;
-    wins.innerText = `Wins: ${score.wins}`;
-    losses.innerText = `Losses: ${score.losses}`;
-    res.innerText = 'Result: ';
-    you.innerText = 'You: ';
-    comp.innerText = 'Computer: ';
-    localStorage.removeItem('score');
+reset.addEventListener('click', resetScore)
+
+document.body.addEventListener('keydown', (event) => {
+if (event.key === 'r') {
+    resetScore()
+}
 })
 
 let score = JSON.parse(localStorage.getItem('score')) || { wins: 0, losses: 0 };
@@ -212,6 +224,8 @@ const autoplay = () => {
         play.innerHTML = 'Autoplay';
     }
 }
+
+
 
 play.addEventListener('click', autoplay)
 
