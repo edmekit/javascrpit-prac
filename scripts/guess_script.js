@@ -1,8 +1,9 @@
 
 let num = Math.floor(Math.random() * 100);
 let attempts = 0
+const guessbtn = document.querySelector('.guess_btn')
 
-function getGuess() {
+guessbtn.addEventListener('click', () => {
     let guess = Number(document.querySelector('.guess').value)
     let diff = Math.abs(num - guess)
     if (guess === num) {
@@ -28,7 +29,9 @@ function getGuess() {
     } else {
         document.querySelector('.result').innerHTML = `Input a number!`
     }
-}
+})
+
+
 
 
 
