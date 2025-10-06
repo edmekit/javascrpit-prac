@@ -42,7 +42,6 @@ add.addEventListener('click', () => {
     renderTodo();
 })
 
-
 function deleteTodo(i) {
     todos.splice(i, 1);
     renderTodo();
@@ -61,7 +60,6 @@ function startTimer() {
 
 let title = false
 let mess = 2
-
 
 setInterval(() => {
     if (mess > 0) {
@@ -198,4 +196,6 @@ function countWords(arr) {
 }
 
 countWords(words)
+
+
 */
